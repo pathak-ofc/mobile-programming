@@ -1,11 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K xaa</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Valo Adda — Stop begging for scrims in Discord</title>
+<meta name="description" content="Valo Adda is the verified scrim platform for Valorant. Riot-verified ranks, real team ratings, instant scrim matching.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>hi</h2>
+
+<!-- ambient background -->
+<div class="bg-fx" aria-hidden="true">
+  <div class="orb orb-a"></div>
+  <div class="orb orb-b"></div>
+  <div class="grid-overlay"></div>
+  <div class="noise"></div>
+  <div class="scanline"></div>
+</div>
+
+<div class="ticker-top">
+  <div class="wrap ticker-top-row">
+    <span class="live-pill"><span class="live-dot"></span> LIVE — 214 teams looking tonight</span>
+    <span class="ticker-top-text">Season 03 open · Free early access · Riot verification required</span>
+    <a href="#join" class="ticker-top-link">Claim slot →</a>
+  </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-row">
+    <a href="#" class="logo">
+      <span class="logo-mark">VA</span>
+      <span class="logo-text">VALO<em>ADDA</em></span>
+    </a>
+    <nav class="nav">
+      <a href="#how">How it works</a>
+      <a href="#board">Scrim board</a>
+      <a href="#features">Platform</a>
+      <a href="#trust">Proof</a>
+    </nav>
+    <div class="header-cta">
+      <a href="#join" class="btn btn-ghost">Log in</a>
+      <a href="#join" class="btn btn-primary btn-cut"><span>Get verified</span></a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">≡</button>
+  </div>
+  <div class="wrap mobile-nav" id="mobileNav">
+    <a href="#how">How it works</a>
+    <a href="#board">Scrim board</a>
+    <a href="#features">Platform</a>
+    <a href="#trust">Proof</a>
+    <a href="#join" class="mobile-cta">Get verified →</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="hero-badge reveal">
+          <span class="badge-verified">✓ RIOT VERIFIED</span>
+          <span class="badge-sep">/</span>
+          <span class="badge-dim">NO FAKE RANKS. NO NO-SHOWS.</span>
+        </div>
+        <h1 class="reveal d1">Stop begging<br>for scrims<br><span class="h1-red">in Discord.</span></h1>
+        <p class="hero-sub reveal d2">Link your Riot account. Get a real team rating from actual rank data. Match opponents at your level and lock a scrim tonight — not next week.</p>
+        <div class="hero-actions reveal d3">
+          <a href="#join" class="btn btn-primary btn-cut btn-large"><span>Find my matchup</span></a>
+          <a href="#board" class="btn btn-ghost btn-large">Browse open slots</a>
+        </div>
+        <div class="consent-strip reveal d4">
+          <span class="consent-icon">◈</span>
+          <p><strong>You control what shows.</strong> Linking shares IGN + rank + recent matches — nothing else. Opt-in, revocable anytime.</p>
+        </div>
+        <div class="hero-stats reveal d5">
+          <div class="stat">
+            <span class="stat-num" data-count="12840">0</span>
+            <span class="stat-label">verified players</span>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat">
+            <span class="stat-num" data-count="4821">0</span>
+            <span class="stat-label">scrims confirmed</span>
+          </div>
+          <div class="stat-div"></div>
+          <div class="stat">
+            <span class="stat-num"><span data-count="94">0</span>%</span>
+            <span class="stat-label">show-up rate</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal d3">
+        <div class="visual-stack">
+          <div class="scrim-card main-card">
+            <div class="scrim-card-head">
+              <span class="status-dot"></span>
+              <span class="status-label">OPEN REQUEST</span>
+              <span class="scrim-time mono">TONIGHT · 20:00</span>
+            </div>
+            <div class="scrim-teams">
+              <div class="scrim-team">
+                <span class="team-avatar">FF</span>
+                <span class="team-name">FRAGILE FIVE</span>
+                <span class="team-rating">★ 1,842 · Imm3 avg</span>
+              </div>
+              <span class="vs">VS</span>
+              <div class="scrim-team scrim-team-open">
+                <span class="team-avatar ghost-avatar">?</span>
+                <span class="team-name dim">YOU?</span>
+                <span class="team-rating dim">1,700 – 1,950</span>
+              </div>
+            </div>
+            <div class="rating-bar"><span class="rating-fill"></span><span class="rating-marker"></span></div>
+            <div class="scrim-card-foot">
+              <span>◉ NA · Mumbai</span>
+              <span>BO3 · Bind / Ascent / Sunset</span>
+            </div>
+            <span class="btn btn-primary btn-cut btn-block"><span>Accept scrim</span></span>
+          </div>
+
+          <div class="float-card verify-card">
+            <span class="check">✓</span>
+            <div class="float-text">
+              <strong>Riot ID verified</strong>
+              <small class="mono">TenZFan_NP · Immortal 3</small>
+            </div>
+            <span class="verified-tag">VERIFIED</span>
+          </div>
+
+          <div class="float-card result-card">
+            <span class="result-score mono">13 — 9</span>
+            <div class="float-text">
+              <strong>Result confirmed</strong>
+              <small>Both captains matched · +24</small>
+            </div>
+            <span class="result-plus">+24</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap hero-proof reveal">
+      <div class="avatars"><span>VK</span><span>AR</span><span>SP</span><span>JM</span><span class="more">+9k</span></div>
+      <p>Trusted by <strong>1,400+ teams</strong> across NA, EU &amp; APAC · Avg. match found in <strong class="red-text">under 2 minutes</strong></p>
+    </div>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>RADIANT ONLY ▸</span><span class="alt">SCRIM FOUND IN 47s ▸</span><span>IMMORTAL 3 ▸</span><span class="alt">13–9 CONFIRMED ▸</span><span>DIAMOND 2 ▸</span><span class="alt">+24 RATING ▸</span><span>ASCENDANT ▸</span><span class="alt">NO NO-SHOWS ▸</span>
+      <span>RADIANT ONLY ▸</span><span class="alt">SCRIM FOUND IN 47s ▸</span><span>IMMORTAL 3 ▸</span><span class="alt">13–9 CONFIRMED ▸</span><span>DIAMOND 2 ▸</span><span class="alt">+24 RATING ▸</span><span>ASCENDANT ▸</span><span class="alt">NO NO-SHOWS ▸</span>
+    </div>
+  </div>
+
+  <!-- ============ HOW ============ -->
+  <section id="how" class="how">
+    <div class="wrap">
+      <p class="kicker reveal">// THE LOOP</p>
+      <h2 class="reveal">From login to lobby<br>in four moves.</h2>
+      <ol class="steps">
+        <li class="step reveal">
+          <span class="step-num mono">01</span>
+          <div class="step-icon">◉</div>
+          <h3>Verify with Riot</h3>
+          <p>Sign in with your real Riot account. Rank + IGN pull automatically. Fakers can't get in.</p>
+          <span class="step-glow"></span>
+        </li>
+        <li class="step reveal d1">
+          <span class="step-num mono">02</span>
+          <div class="step-icon">⬢</div>
+          <h3>Stack your roster</h3>
+          <p>Invite your five. Everyone verifies solo. Team rating builds from real data — provisional till you prove it.</p>
+          <span class="step-glow"></span>
+        </li>
+        <li class="step reveal d2">
+          <span class="step-num mono">03</span>
+          <div class="step-icon">⚡</div>
+          <h3>Lock a scrim</h3>
+          <p>Post a slot or filter the board by rating, region, time. Captains confirm in-app. Done.</p>
+          <span class="step-glow"></span>
+        </li>
+        <li class="step reveal d3">
+          <span class="step-num mono">04</span>
+          <div class="step-icon">✓</div>
+          <h3>Confirm &amp; climb</h3>
+          <p>Both sides submit score + screenshot. Match = instant rating update. Mismatch = dispute queue.</p>
+          <span class="step-glow"></span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ BOARD PREVIEW ============ -->
+  <section id="board" class="board">
+    <div class="wrap board-grid">
+      <div class="board-copy">
+        <p class="kicker reveal">● LIVE BOARD</p>
+        <h2 class="reveal">Open slots,<br>right now.</h2>
+        <p class="board-sub reveal">This is what tonight looks like. Filter by your rating band and hit accept — the other captain gets pinged instantly.</p>
+        <div class="filter-chips reveal">
+          <span class="chip active">1.7k – 2k</span>
+          <span class="chip">NA East</span>
+          <span class="chip">Tonight</span>
+          <span class="chip">BO3</span>
+        </div>
+        <a href="#join" class="btn btn-primary btn-cut reveal"><span>Post my slot — free</span></a>
+      </div>
+      <div class="board-list reveal d2">
+        <div class="board-row hot">
+          <span class="live-dot sm"></span>
+          <div class="board-team"><strong>NIGHT OWLS</strong><small class="mono">★ 1,901 · DIA–IMM</small></div>
+          <span class="board-meta mono">20:30 · BO3</span>
+          <span class="board-btn">Accept →</span>
+        </div>
+        <div class="board-row">
+          <span class="live-dot sm"></span>
+          <div class="board-team"><strong>PIXEL REBELS</strong><small class="mono">★ 1,784 · PLAT–DIA</small></div>
+          <span class="board-meta mono">21:00 · BO1</span>
+          <span class="board-btn">Accept →</span>
+        </div>
+        <div class="board-row">
+          <span class="live-dot sm"></span>
+          <div class="board-team"><strong>LOW PING LEGENDS</strong><small class="mono">★ 1,955 · IMM2+</small></div>
+          <span class="board-meta mono">22:00 · BO5</span>
+          <span class="board-btn">Accept →</span>
+        </div>
+        <div class="board-row dim">
+          <span class="live-dot sm off"></span>
+          <div class="board-team"><strong>RETIREES CLUB</strong><small class="mono">★ 1,402 · GOLD</small></div>
+          <span class="board-meta mono">FILLED ✓</span>
+          <span class="board-btn done">Locked</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section id="features" class="features">
+    <div class="wrap">
+      <p class="kicker reveal">// THE ARSENAL</p>
+      <h2 class="reveal">Everything Discord<br>can't do.</h2>
+      <div class="feature-grid">
+        <div class="feature reveal">
+          <span class="f-tag mono">ANTI-SMURF</span>
+          <h3>Riot-verified identity</h3>
+          <p>Every profile is a real Riot account. Ranks refresh automatically — self-reported peaks are dead.</p>
+        </div>
+        <div class="feature reveal d1">
+          <span class="f-tag mono">GLICKO-2</span>
+          <h3>Rating that moves</h3>
+          <p>Start from roster rank, then climb on results. Beat a stronger team and it shows. New stacks stay provisional.</p>
+        </div>
+        <div class="feature reveal d2">
+          <span class="f-tag mono">INSTANT</span>
+          <h3>Scrim board, not a group chat</h3>
+          <p>Rating range, region, time. Post once, get found. No scrolling 4 servers hoping someone's free.</p>
+        </div>
+        <div class="feature reveal">
+          <span class="f-tag mono">SOLO → STACK</span>
+          <h3>LFG that builds teams</h3>
+          <p>Rank, role, region, mic. Drop a card as a free agent or find your missing duelist in minutes.</p>
+        </div>
+        <div class="feature reveal d1">
+          <span class="f-tag mono">ZERO DRAMA</span>
+          <h3>Disputes handle themselves</h3>
+          <p>Dual score + screenshot submit. Match = confirmed. Mismatch = frozen in a review queue with evidence attached.</p>
+        </div>
+        <div class="feature reveal d2">
+          <span class="f-tag mono">REP</span>
+          <h3>Reputation sticks</h3>
+          <p>No-shows, toxicity, dodges — it follows the account, not just the team tag. Good actors get booked faster.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRUST ============ -->
+  <section id="trust" class="trust">
+    <div class="wrap trust-grid">
+      <div>
+        <p class="kicker reveal">✓ PROOF, NOT PROMISES</p>
+        <h2 class="reveal">Nobody has to<br>trust anyone.</h2>
+        <p class="trust-sub reveal">The system does the trusting. Two independent submits, screenshots attached, ratings frozen till both sides agree.</p>
+        <div class="consent-card reveal d2">
+          <strong>◈ Riot data consent — built in, not buried</strong>
+          <p>Before your profile goes public you see exactly what linking shares (IGN, rank, recent matches) and tap <b>"I agree — show my profile."</b> Revoke anytime, profile hides instantly. Required by Riot. Respected by us.</p>
+        </div>
+      </div>
+      <div class="proof-visual reveal d1">
+        <div class="proof-row">
+          <div class="proof-side"><span class="proof-cap mono">CAPTAIN A</span><strong class="mono">13 – 9</strong><small>✓ screenshot attached</small></div>
+          <div class="proof-mid">⇄</div>
+          <div class="proof-side"><span class="proof-cap mono">CAPTAIN B</span><strong class="mono">13 – 9</strong><small>✓ screenshot attached</small></div>
+        </div>
+        <div class="proof-match">✓ MATCH — RATINGS UPDATED <span class="mono">+24 / −24</span></div>
+        <ul class="trust-list">
+          <li><span class="trust-index">1</span> Both captains submit score + screenshot</li>
+          <li><span class="trust-index">2</span> Match = instant confirm + rating swing</li>
+          <li><span class="trust-index">3</span> Mismatch = dispute window, evidence locked</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LFG STRIP ============ -->
+  <section class="lfg">
+    <div class="wrap">
+      <div class="lfg-head">
+        <h2 class="reveal">Solo? Get picked up.</h2>
+        <a href="#join" class="lfg-link reveal">View all 380 LFG cards →</a>
+      </div>
+      <div class="lfg-row">
+        <div class="lfg-card reveal"><div class="lfg-top"><span class="lfg-rank">IMM 2</span><span class="lfg-role mono">DUELIST · Jett</span></div><strong>SovaMainPain</strong><small>NA East · mic ✓ · tonight</small></div>
+        <div class="lfg-card reveal d1"><div class="lfg-top"><span class="lfg-rank">DIA 3</span><span class="lfg-role mono">INITIATOR · Sova</span></div><strong>quietfragger</strong><small>NA West · mic ✓ · weekends</small></div>
+        <div class="lfg-card reveal d2"><div class="lfg-top"><span class="lfg-rank">ASC 1</span><span class="lfg-role mono">SENTINEL · KJ</span></div><strong>clutchmom</strong><small>EU · mic ✓ · after 9pm</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section id="join" class="cta">
+    <div class="wrap">
+      <div class="cta-inner reveal">
+        <p class="kicker center">⚡ EARLY ACCESS — FREE</p>
+        <h2>Your next scrim is<br><span class="h1-red">already waiting.</span></h2>
+        <p class="cta-sub">Verify once. Get rated. Play tonight.</p>
+        <div class="cta-actions">
+          <a href="#" class="btn btn-primary btn-cut btn-large"><span>Verify with Riot ID</span></a>
+        </div>
+        <p class="cta-note mono">FREE DURING EARLY ACCESS · RIOT ACCOUNT REQUIRED · REVOKE ANYTIME</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-row">
+    <a href="#" class="logo logo-small"><span class="logo-mark sm">VA</span><span class="logo-text">VALO<em>ADDA</em></span></a>
+    <p class="footer-disclaimer">Valo Adda is a fan project and isn't endorsed by Riot Games and doesn't reflect the views or opinions of Riot Games or anyone officially involved in producing or managing VALORANT. VALORANT and Riot Games are trademarks or registered trademarks of Riot Games, Inc.</p>
+  </div>
+</footer>
+
+<script>
+// reveal on scroll + counters + header + mobile nav (no deps)
+(function(){
+  var header = document.getElementById('siteHeader');
+  addEventListener('scroll', function(){
+    header.classList.toggle('scrolled', scrollY > 12);
+  }, {passive:true});
+
+  var btn = document.getElementById('menuBtn');
+  var nav = document.getElementById('mobileNav');
+  btn.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent = open ? '✕' : '≡';
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      nav.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+      btn.textContent = '≡';
+    });
+  });
+
+  var els = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold: 0.12});
+    els.forEach(function(el){ io.observe(el); });
+  } else {
+    els.forEach(function(el){ el.classList.add('in'); });
+  }
+
+  // animated counters
+  function animateCount(el){
+    var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+    var t0 = null, dur = 1400;
+    function fmt(n){ return n.toLocaleString('en-US'); }
+    function step(t){
+      if (!t0) t0 = t;
+      var p = Math.min((t - t0) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(Math.round(target * eased));
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var counters = document.querySelectorAll('[data-count]');
+  if ('IntersectionObserver' in window) {
+    var cio = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting) { animateCount(e.target); cio.unobserve(e.target); }
+      });
+    }, {threshold: 0.4});
+    counters.forEach(function(c){ cio.observe(c); });
+  } else {
+    counters.forEach(animateCount);
+  }
+})();
+</script>
+
 </body>
 </html>
