@@ -1,9 +1,22 @@
+
 function sum() {
-    document.getElementById("num").innerText = Number(document.getElementById("first").value) + Number(document.getElementById("second").value);
+    const first = Number(document.getElementById("first").value);
+    const second = Number(document.getElementById("second").value);
+
+    msg(`The sum is ${first + second}`);
 }
+
 function diff() {
-    document.getElementById("num").innerText = Number(document.getElementById("first").value) - Number(document.getElementById("second").value);
+    const first = Number(document.getElementById("first").value);
+    const second = Number(document.getElementById("second").value);
+
+    msg(`The difference is ${first - second}`);
 }
+
 function mult() {
-    document.getElementById("num").innerText = Number(document.getElementById("first").value) * Number(document.getElementById("second").value);
+    const first = Number(document.getElementById("first").value);
+    const second = Number(document.getElementById("second").value);
+
+    msg(`The product is ${first * second}`);
 }
+
