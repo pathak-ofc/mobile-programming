@@ -29,6 +29,9 @@ function marks() {
      + Number(document.getElementById("nep").value) + Number(document.getElementById("gk").value) + Number(document.getElementById("comp").value) +
       Number(document.getElementById("arts").value) + Number(document.getElementById("sos").value);
       console.log(sum);
+    
+    document.getElementById("total").innerText = sum + "/800";
+    
     let pass = false;
 
       if (sum > 700){
