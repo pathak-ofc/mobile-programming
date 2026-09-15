@@ -1,74 +1,126 @@
-*{
-    margin: 0%;
-    padding: 0%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-body{
-    margin: 0%;
-    padding: 0%;
+body {
+    font-family: 'Inter', sans-serif;
 }
 
-
-#main{
+#main {
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background: #000;
 }
 
-#card{
-    width: 500px;
-    padding: 30px;
+#card {
+    width: 420px;
+    max-width: 90vw;
+    padding: 44px 36px;
     display: flex;
-    position: absolute;
-    border: 2px;
-    border-color: white;
-    border-radius: 10px;
-    background-color: aliceblue;
+    align-items: center;
+    gap: 26px;
+    background: #fff;
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 4px;
+    transition: background 0.35s ease, color 0.35s ease, border-color 0.35s ease;
 }
 
-#info{
-    position: relative;
-    top: 30px;
-    left: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: large;
-    font-weight: 500;
+/* hover now inverts the card instead of turning red */
+#card:hover {
+    background: #000;
+    color: #fff;
+    border-color: #fff;
+}
+
+.pic {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1.5px solid currentColor;
+    flex-shrink: 0;
+}
+
+#info {
     display: flex;
     flex-direction: column;
 }
 
-.pic{
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 50%;
+.name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+.location {
+    margin-top: 6px;
+    font-size: 13.5px;
+    opacity: 0.65;
 }
 
 #qrr {
-    display: flex;
-}
-
-#qr{
-    position: relative;
-    top: 40px;
-    width: 100px;
-    height: 30px;
-}
-
-#show{
-    display:none;
-}
-
-
-.qri{
-    width: 100px;
-    height: 100px;
-    margin-left: 20px;
     margin-top: 20px;
+}
 
-    top: 100px;
+#qr {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    background: transparent;
+    color: currentColor;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    padding: 9px 20px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+#card:hover #qr:hover {
+    background: #fff;
+    color: #000;
+}
+
+#card:not(:hover) #qr:hover {
+    background: #000;
+    color: #fff;
+}
+
+#show {
+    display: none;
+    margin-top: 18px;
+}
+
+.qri {
+    width: 120px;
+    height: 120px;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    padding: 6px;
+    background: #fff;
+}
+
+#hide {
+    display: block;
+    margin-top: 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    background: none;
+    border: none;
+    color: currentColor;
+    opacity: 0.6;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0;
+}
+
+#hide:hover {
+    opacity: 1;
 }
