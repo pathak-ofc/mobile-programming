@@ -1,0 +1,74 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+body{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+#main{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+#card{
+    width: 500px;
+    padding: 30px;
+    display: flex;
+    position: absolute;
+    border: 2px;
+    border-color: white;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+#info{
+    position: relative;
+    top: 30px;
+    left: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+}
+
+.pic{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#qrr {
+    display: flex;
+}
+
+#qr{
+    position: relative;
+    top: 40px;
+    width: 100px;
+    height: 30px;
+}
+
+#show{
+    display:none;
+}
+
+
+.qri{
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    margin-top: 20px;
+
+    top: 100px;
+}
