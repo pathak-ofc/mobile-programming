@@ -4,6 +4,6 @@
     background-color: aqua;
 }
 
-#highlighted{
+#profile-card.highlighted{
     background-color: red;
 }

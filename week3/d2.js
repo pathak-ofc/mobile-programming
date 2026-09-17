@@ -18,5 +18,11 @@ $(document).ready(function () {
     $("#set-input").click(function () {
         $("#nickname-input").val("jQuery Pro");
     });
+    $("#highlight-card").click(function () {
+        $("#profile-card").addClass("highlighted");
+    });
+    $("#highlight-remove").click(function () {
+        $("#profile-card").removeClass("highlighted");
+    });
 
 })
