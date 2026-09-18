@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js">
+
+    </script>
+</head>
+
+<body>
+
+    <input id="first" type="number" placeholder="Enter a number">
+    <input id="second" type="number" placeholder="Enter a number">
+    <button onclick=sum() type="button">Add</button>
+    <button onclick=diff() type="button">Subtract</button>
+    <button onclick=mult() type="button">Multiply</button>
+
+    <p id="num"></p>
+
+    <br>
+
+    <!-- //day2 -->
+
+    <form onsubmit=marks(event)>
+        english
+        <input id="eng" type="number" placeholder="marks in english" required min="0" max="100"> <br>
+        math
+        <input id="math" type="number" placeholder="marks in math" required min="0" max="100"><br>
+        science
+        <input id="science" type="number" placeholder="marks in science" required min="0" max="100"><br>
+        gk
+        <input id="gk" type="number" placeholder="marks in gk" required min="0" max="100"><br>
+        nepali
+        <input id="nep" type="number" placeholder="marks in nepali " required min="0" max="100"><br>
+        computer
+        <input id="comp" type="number" placeholder="marks in computer" required min="0" max="100"><br>
+        social
+        <input id="sos" type="number" placeholder="marks in social" required min="0" max="100"><br>
+        arts
+        <input id="arts" type="number" placeholder="marks in arts" required min="0" max="100"><br>
+        <button type="submit">submit</button>
+    </form>
+    <p id="total"></p>
+    <p id="marks"></p>
+    <p id="pof"></p>
+
+    <br><br>
+    <!-- //day3 -->
+    <input id="n1" type="number" placeholder="Enter a number">
+    <input id="n2" type="number" placeholder="Enter a number">
+    <button onclick="calc('add')" type="button">Add</button>
+    <button onclick="calc('subtract')" type="button">Subtract</button>
+    <button onclick="calc('mult')" type="button">Multiply</button>
+
+    <p id="result"></p>
+
+</body>
+
+</html>
