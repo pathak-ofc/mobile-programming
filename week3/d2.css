@@ -1,9 +1,23 @@
-#profile-card{
-    width: 200px;
-    height: 200px;
+#profile-card {
+    width: 250px;
+    min-height: 200px;
+    padding: 10px;
     background-color: aqua;
 }
 
-#profile-card.highlighted{
-    background-color: red;
+#profile-card.highlighted {
+    background-color: gold;
+}
+
+#profile-card.dark-mode {
+    background-color: #222;
+    color: white;
+}
+
+#profile-photo.rounded {
+    border-radius: 50%;
+}
+
+#profile-photo.shadow {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
 }
