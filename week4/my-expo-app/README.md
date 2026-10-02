@@ -16,6 +16,20 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npx expo start
    ```
 
+## Run with Docker
+
+Install and start Docker Desktop, then run these commands from `week4/my-expo-app`:
+
+```bash
+docker compose up --build
+```
+
+Open http://localhost:8081 to view the Expo web app. Stop the container with:
+
+```bash
+docker compose down
+```
+
 In the output, you'll find options to open the app in a
 
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)
