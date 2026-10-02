@@ -6,7 +6,12 @@ services:
     ports:
       - "8081:8081"
     environment:
-      CI: "1"
+      # Set to your PC's LAN IP (e.g. 192.168.1.10) so Expo Go on a phone can connect.
+      # Leave unset if you only use the web version at http://localhost:8081
+      REACT_NATIVE_PACKAGER_HOSTNAME: ${EXPO_HOST_IP:-localhost}
+      # Hot reload over Windows bind mounts
+      WATCHPACK_POLLING: "true"
+      CHOKIDAR_USEPOLLING: "true"
     volumes:
       - .:/app
       - expo_node_modules:/app/node_modules

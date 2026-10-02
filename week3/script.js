@@ -3,13 +3,13 @@ $(document).ready(function () {
     function () {
       $(this).css({
         "background-color": "red",
-        color: "white",
+        "color": "white",
       });
     },
     function () {
       $(this).css({
         "background-color": "white",
-        color: "black",
+        "color": "black",
       });
     },
   );

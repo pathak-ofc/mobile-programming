@@ -1,6 +1,4 @@
 $(document).ready(function () {
-
-    
     $("#show-name").click(function () {
         $("#output").text($("#student-name").text());
     });
@@ -17,8 +15,6 @@ $(document).ready(function () {
     $("#set-input").click(function () {
         $("#nickname-input").val("jQuery Pro");
     });
-
-   
     $("#highlight-card").click(function () {
         $("#profile-card").addClass("highlighted");
     });
@@ -31,16 +27,12 @@ $(document).ready(function () {
     $("#toggle-rounded").click(function () {
         $("#profile-photo").toggleClass("rounded");
     });
-
-    
     $("#red-bg").click(function () {
         $("#profile-card").css("background-color", "#e74c3c");
     });
     $("#reset-bg").click(function () {
         $("#profile-card").css("background-color", "white");
     });
-
-   
     $("#hide-photo").click(function () {
         $("#profile-photo").hide("slow");
     });
@@ -50,8 +42,6 @@ $(document).ready(function () {
     $("#toggle-bio").click(function () {
         $("#student-bio").toggle();
     });
-
-   
     $("#fade-out").click(function () {
         $("#profile-card").fadeOut();
     });
@@ -71,15 +61,11 @@ $(document).ready(function () {
     $("#slide-toggle").click(function () {
         $("#skills-list").slideToggle();
     });
-
-    
     $("#animate-card").click(function () {
         $("#profile-card")
             .animate({ marginLeft: "200px" }, 1000)
             .animate({ marginLeft: "0px" }, 1000);
     });
-
-
     $("#profile-photo").on("mouseenter", function () {
         $(this).addClass("shadow");
     });
@@ -89,5 +75,4 @@ $(document).ready(function () {
     $("#nickname-input").on("keydown", function (e) {
         $("#output").text("Key pressed: " + e.key);
     });
-
 });
